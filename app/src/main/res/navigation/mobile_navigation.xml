@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_lista">
+
+    <fragment
+        android:id="@+id/nav_lista"
+        android:name="com.example.examen_navarro.ui.Lista.ListaFragment"
+        android:label="lista"
+        tools:layout="@layout/fragment_lista" >
+        <action
+            android:id="@+id/action_nav_lista_to_resultadoFragment"
+            app:destination="@id/resultadoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.example.examen_navarro.ui.Salir.SalirFragment"
+        android:label="salir"
+        tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/resultadoFragment"
+        android:name="com.example.examen_navarro.ui.Lista.ResultadoFragment"
+        android:label="fragment_resultado"
+        tools:layout="@layout/fragment_resultado" >
+        <action
+            android:id="@+id/action_resultadoFragment_to_nav_lista"
+            app:destination="@id/nav_lista" />
+    </fragment>
+
+</navigation>
